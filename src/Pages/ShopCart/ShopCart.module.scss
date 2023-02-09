@@ -1,5 +1,6 @@
 .ShopCard{
-    @apply  w-full py-[60px];
+    padding: 60px 0;
+    @apply  w-full;
     .cont{
         @apply z-10 relative;
         max-width: 1200px;

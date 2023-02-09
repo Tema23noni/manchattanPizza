@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Righteous&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap);
 .header{
   overflow: hidden;
   font-family: 'Kelly Slab', cursive;
@@ -49,7 +49,8 @@
         z-index: -1;
       }
       .header__nav{
-        @apply grow ml-[100px];
+        @apply grow;
+        margin-left: 100px;
         .header__nav__links{
           @apply flex justify-between ;
           .links{
@@ -128,6 +129,7 @@
   .header__burger.active{
     display: block;
     background-color: #2D2D2D;
-    @apply w-full h-full fixed top-0 left-0 z-[999]
-  }
+    z-index: 999;
+    @apply w-full h-full fixed top-0 left-0;
+    }
 }

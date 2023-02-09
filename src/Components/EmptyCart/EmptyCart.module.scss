@@ -1,12 +1,14 @@
 .root{
-    @apply w-full h-[90%] flex justify-center items-center flex-col;
+    height: 90%;
+    @apply w-full flex justify-center items-center flex-col;
     div{
-        @apply my-[50px] text-2xl text-center;
+        margin: 50px 0;
+        @apply text-2xl text-center;
         h2{
             @apply text-4xl font-bold;
         }
         p{
-            @apply tracking-[3px];
+            letter-spacing: 3px;
             span{
                 @apply text-5xl
             }
@@ -19,7 +21,8 @@
     }
     a{
         margin: 40px 0;
-        @apply bg-orange-400 text-xl uppercase text-white px-[20px] py-[10px] rounded-xl font-bold;
+        padding: 10px 20px;
+        @apply bg-orange-400 text-xl uppercase text-white rounded-xl font-bold;
         transition: .5s;
         &:hover{
             transform: scale(1.1);

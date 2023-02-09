@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed&family=Unbounded&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Unbounded&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed&family=Unbounded&display=swap);
 .MainPage{
     flex: 1 1 auto;
-    @apply overflow-hidden relative w-full min-h-[100%] flex justify-start items-center px-[20px] desktop:px-[0px];
+    @apply overflow-hidden relative w-full min-h-[100%] px-[20px] desktop:px-[0px] flex justify-start items-center ;
     background: #2B2B2B;
     .root{
       @apply flex justify-between items-center text-white text-xl font-bold;
@@ -13,17 +13,11 @@
           user-select: none;
           .text{
             font-family: 'Sofia Sans Extra Condensed', sans-serif;
-            @apply my-7 text-orange-400 uppercase tracking-[4px] cursor-default;
+            @apply my-7 tracking-[4px] text-orange-400 uppercase  cursor-default;
           }
           h2{
             cursor: default;
-            @apply  uppercase my-10 tracking-[5px] 
-            desktop:text-7xl
-            laptop:text-7xl
-            tablet:text-6xl
-            bMobile:text-5xl bMobile:tracking-[5px] 
-            lMobile:text-5xl lMobile:tracking-[0px]            
-            ;
+            @apply  tracking-[5px] desktop:text-7xl laptop:text-7xl tablet:text-6xl bMobile:tracking-[5px] bMobile:text-5xl lMobile:tracking-[0px] lMobile:text-5xl uppercase my-10;
             .sToH{
               @apply text-orange-400 cursor-pointer;
               transition: 0.3s;
@@ -34,28 +28,15 @@
           }
 
           .pick{
-            @apply text-base my-5 cursor-default tablet:w-[400px] bMobile:w-[350px] lMobile:w-[300px]
-            desktop:text-xl
-            laptop:text-xl
-            tablet:text-lg
-            bMobile:text-base
-            lMobile:text-sm            
-            ;
+            @apply tablet:w-[400px] bMobile:w-[350px]  bMobile:text-base lMobile:w-[300px] lMobile:text-sm  desktop:text-xl desktop:text-xl laptop:text-xl text-base tablet:text-lg my-5 cursor-default;
           }
         }
         .btn{
-          @apply flex justify-between items-center py-[40px] bMobile:flex-row bMobile:items-center
-          lMobile:flex-col lMobile:items-start
-          ;
+          @apply flex justify-between py-[40px] lMobile:flex-col lMobile:items-start bMobile:flex-row bMobile:items-center items-center ;
           user-select: none;
           .contest{
             background: #585858;
-            @apply text-base rounded-xl text-center mr-[30px] py-[10px] px-[20px]
-            laptop:text-lg tablet:w-[280px]
-            tablet:py-[10px] tablet:text-lg tablet:px-[25px] tablet:w-[240px]
-            bMobile:py-[10px] bMobile:text-sm bMobile:px-[25px] bMobile:w-[190px] bMobile:mb-[0px]
-            lMobile:text-base lMobile:py-[10px] lMobile:px-[5px] lMobile:w-[200px] lMobile:mb-[20px]          
-            ;
+            @apply  mr-[30px] py-[10px] px-[20px] rounded-xl text-center laptop:text-lg tablet:w-[280px] tablet:py-[10px] tablet:text-lg tablet:px-[25px] tablet:w-[240px] bMobile:py-[10px] bMobile:text-sm bMobile:px-[25px] bMobile:w-[190px] bMobile:mb-[0px] lMobile:py-[10px] lMobile:px-[5px] lMobile:w-[200px] lMobile:mb-[20px] lMobile:text-base text-base text-center;
             transition: .4s;
             &:hover{
               background:  #494949;
@@ -63,12 +44,7 @@
             }
           }
           .menu{
-            @apply bg-orange-400 text-lg rounded-xl mr-[30px] text-center  px-[30px]
-            desktop:py-[15px]
-            laptop:py-[15px] laptop:text-xl tablet:w-[300px]
-            tablet:py-[15px] tablet:text-lg tablet:px-[25px] tablet:w-[270px]
-            bMobile:py-[10px] bMobile:text-base bMobile:px-[25px] bMobile:w-[240px] 
-            lMobile:text-base lMobile:py-[10px] lMobile:px-[5px] lMobile:w-[200px]          
+            @apply  text-lg rounded-xl mr-[30px] px-[30px] text-center desktop:py-[15px] laptop:py-[15px] laptop:text-xl tablet:w-[300px] tablet:py-[15px] tablet:text-lg tablet:px-[25px] tablet:w-[270px] bMobile:py-[10px] bMobile:text-base bMobile:px-[25px] bMobile:w-[240px] lMobile:py-[10px] lMobile:px-[5px] lMobile:w-[200px]  lMobile:text-base bg-orange-400          
             ;
             transition: .4s;
             &:hover{

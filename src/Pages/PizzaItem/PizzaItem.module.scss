@@ -85,10 +85,11 @@
         }
         @media screen and (max-width:767px) and (min-width:375px) {
             a{
-                @apply m-[20px] text-[16px];
+                font-size: 16px;
+                margin: 20px;
             }
             button{
-                @apply px-4 text-[16px] m-[20px]
+                @apply text-[16px] m-[20px] px-4 
             }
         }
     }

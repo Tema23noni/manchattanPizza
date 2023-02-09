@@ -1,10 +1,14 @@
 .root{
-    @apply flex my-[10px];
+    @apply flex;
+    margin: 10px 0;
     li{
-        @apply mx-[20px] pt-5 pb-2 flex items-center select-none;
+        margin: 0 20px ;
+        @apply  pt-5 pb-2 flex items-center select-none;
         a{
+            width: 40px;
+            height: 40px;
             border: 2px solid rgb(251, 146, 60);
-            @apply text-center flex justify-center items-center w-[40px] h-[40px] rounded-full text-orange-400 font-semibold cursor-pointer;
+            @apply text-center flex justify-center items-center rounded-full text-orange-400 font-semibold cursor-pointer;
             &:hover{
                 @apply bg-orange-400 text-white
             }
@@ -19,7 +23,7 @@
     }
     @media screen and (max-width:767px){
         li{
-            @apply mx-[10px]
+            margin: 0 10px;
         }
     }
 }

@@ -14,19 +14,19 @@
         .content{
             @apply my-[20px] h-full;
             .mission{
-                @apply py-[20px];
+                padding: 20px 0;
                     h3{
                         @apply text-3xl text-orange-400 font-bold uppercase
                     }
                     
                     p{
                         word-break: break-all;
-                        @apply font-medium text-lg w-[60%] my-[10px]
+                        @apply w-[60%] my-[10px] font-medium text-lg ;
                     }
     
             }
             .write{
-                @apply my-[40px];
+                margin: 40px 0;
                 h3{
                     @apply text-3xl text-orange-400 font-bold uppercase
                 }
@@ -42,9 +42,10 @@
             }
         }
         .img{
-            @apply w-full flex justify-center h-[200px];
+            @apply w-full  h-[200px] flex justify-center;
             div{
-                @apply w-[500px] h-[200px];
+                width: 500px;
+                height: 200px;
                 background: url('../../img/mission.png') 50% 50%/100% 100% no-repeat;
             }
 

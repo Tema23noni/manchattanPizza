@@ -4,7 +4,9 @@
             @apply flex items-center justify-center;
             img{
                 user-select: none;
-                @apply w-[70px] h-[70px] mr-5
+                width: 70px;
+                height: 70px;
+                @apply mr-5;
             }
             div{
                 @apply flex items-center justify-center text-xl;
@@ -21,7 +23,10 @@
             }
             span{
                 user-select: none;
-                @apply rounded-full cursor-pointer bg-orange-400 flex items-center justify-center text-white text-3xl pb-[1px] w-[36px] h-[36px];
+                padding-bottom: 1px;
+                width: 36px;
+                height: 36px;
+                @apply rounded-full cursor-pointer bg-orange-400 flex items-center justify-center text-white text-3xl;
             }
         }
         .pricePizza{
@@ -31,49 +36,51 @@
             }
             svg{
                 user-select: none;
-                @apply bg-orange-400 text-white rounded-full w-[40px] h-[40px] p-2 cursor-pointer;
+                width: 40px;
+                height: 40px;
+                @apply bg-orange-400 text-white rounded-full p-2 cursor-pointer;
             }
         }
-        @media screen and (max-width:767px) and (min-width:375px) {
-            padding: 0px;
-
+        
+    }
+    @media screen and (max-width:767px) and (min-width:375px) {
+        .ShopCartItem{
+        padding: 0px;
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        background-color: #3b3b3b;
+        color: white;
+        .aboutPizza{
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 20px;
-            background-color: #3b3b3b;
-            color: white;
-            .aboutPizza{
+            img{
+                width: 100px;
+                height: 100px;
+            }
+            .params{
                 flex-direction: column;
-                img{
-                    width: 100px;
-                    height: 100px;
-                }
-                .params{
-                    flex-direction: column;
-                    margin: 10px 0;
-                    h2{
-                        font-size: 24px;
-                        
-                    }
-                    p{
-                        margin: 5px 0;
-                    }
-                }  
-            }
-            .countPizza{
-                p{
-                    @apply bg-orange-400
-                }
-            }
-            .pricePizza{
                 margin: 10px 0;
-                p{
+                h2{
                     font-size: 24px;
+                    
                 }
+                p{
+                    margin: 5px 0;
+                }
+            }  
+        }
+        .countPizza{
+            p{
+                @apply bg-orange-400
             }
         }
-        @media screen and (max-width:767px) and (min-width:375px) {
-            margin: 0;
+        .pricePizza{
+            margin: 10px 0;
+            p{
+                font-size: 24px;
+            }
         }
+    }
     }

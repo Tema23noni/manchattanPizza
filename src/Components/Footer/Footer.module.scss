@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Righteous&display=swap);
 .root{
     background-color: #2B2B2B;
     .line{
@@ -17,19 +17,22 @@
                 @apply my-4
             }
             h2{
-                @apply opacity-[0.5] tracking-[2px]
+                opacity: 0.5;
+                letter-spacing: 2px;
             }
             a{
-                @apply tracking-[3px]
+                letter-spacing: 3px;
             }
             p{
-                @apply text-white tracking-[2px] cursor-pointer
+                letter-spacing: 2px;
+                @apply text-white cursor-pointer
             }
         }
     }
     .logo{
         text-align: center;
-        a{font-family: 'Righteous', cursive;
+        a{
+        font-family: 'Righteous', cursive;
         @apply text-xl uppercase;
         padding: 10px 10px;
         margin: 0 10px;

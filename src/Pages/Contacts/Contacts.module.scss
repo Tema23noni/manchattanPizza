@@ -42,7 +42,8 @@
     .Ymap{
         @apply   w-full h-full;
         .map{
-            @apply w-screen h-[300px] 
+            height: 300px;
+            @apply w-screen;  
         }
     } 
     @media screen and (max-width:1200px) and (min-width:768px) {

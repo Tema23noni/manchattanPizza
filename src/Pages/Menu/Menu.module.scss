@@ -1,5 +1,5 @@
 .Menu{
-    @apply px-[20px] ;
+    padding: 0 20px;
     h2{
         font-size: 54px;
         margin: 0;
@@ -11,13 +11,13 @@
     }
 
     .ShopingCart{
-        @apply fixed bottom-[5%] flex right-[10%] bg-orange-400;
+        @apply fixed bottom-[5%] right-[10%] flex  bg-orange-400;
         div{
-            @apply flex items-center text-white py-2 px-5
+            @apply flex items-center text-white py-2 px-5;
         }
     }
     .Menu__sort{
-        @apply w-full;
+        width: 100%;
         .Menu__namePizza{
             @apply text-3xl uppercase tracking-wider mb-2 font-bold;
         }
@@ -27,9 +27,12 @@
                 @apply text-xl text-left;
             }
             .sort{
-                @apply relative;
+                position: relative;
                 button{
-                    @apply flex items-center text-[18px] px-[10px] py-[5px] rounded-3xl bg-orange-400 text-white cursor-pointer mx-[10px];
+                    margin: 0 10px;
+                    padding: 5px 10px;
+                    font-size: 18px;
+                    @apply flex items-center rounded-3xl bg-orange-400 text-white cursor-pointer ;
                     z-index: 100;
                 }
                 div{
@@ -64,11 +67,12 @@
                 }
             }
             div{
-                @apply flex items-center ;
+                display: flex;
+                align-items: center;
             }
             .sortPizza{
                 overflow: hidden;
-                @apply relative;
+                position: relative;
                 button{
                     animation: 1s slideBtn;
                     font-size: 18px;
@@ -94,7 +98,7 @@
                 }
                 .Menu__filters__btn{
                     
-                    animation: 1s ease-in-out  slideinFil; 
+                    animation: 1s ease-in-out slideinFil; 
                     @apply flex justify-between ;
                     
                     li{
