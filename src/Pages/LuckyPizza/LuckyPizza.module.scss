@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed&family=Unbounded&display=swap');
+.root{
+    @apply w-full h-[100%];
+    font-family: 'Unbounded', cursive;
+    background: #2b2b2b;
+    h2{
+        @apply text-center text-white text-2xl py-10 tracking-[2px] uppercase;
+        span{
+            @apply text-orange-400
+        }
+    }
+    .winner{
+        .win{
+            @apply text-center text-xl text-orange-400
+        }
+        p{
+            @apply text-center text-lg py-[10px] text-white;
+            span{
+                @apply text-orange-400
+            }
+        }
+    }
+    .LuckyPizza{
+        @apply w-full h-[70%] relative flex flex-col justify-center items-center overflow-hidden;
+        .pointer{
+            @apply absolute  z-10 left-[50%] -translate-x-[50%] top-[15%] -translate-y-[50%] w-[40px] h-[50px] flex justify-center items-center  bg-orange-400 rounded-full;
+            .arrow{
+                @apply text-white text-4xl;
+            }
+        }
+        .roulette{
+            overflow: hidden;
+            .pizzas{
+
+                position: relative;
+                display: inline-flex;
+                left: 40%;
+                transform: translate3d(130px, 0, 0);
+                list-style: none;
+                transition: 5s cubic-bezier(.21,.53,.29,.99);
+
+                li{
+                    background: #424242;
+                    border-left: 2px solid #3b3b3b;
+                    border-right: 2px solid #3b3b3b;
+                    @apply w-[250px] h-[250px] flex justify-center items-center;
+                    transition: .3s ease;
+                    opacity: 0.7;
+                    img{
+                        @apply w-[80%] h-[80%];
+                        object-fit: contain;
+                        transition: .3s ease;
+                        
+                    }
+                    &:nth-child(2n){
+                        background: #525252
+                    }
+                    &.active{
+                        @apply bg-orange-400 opacity-100;
+                        img{
+                            transform:scale(1.2)
+                        }
+                    }
+                }
+                
+            }
+        }
+        .spinToWin{
+            
+            @apply bg-orange-400 text-white text-center px-5 py-3 my-[20px] rounded-3xl text-xl;
+            &:disabled{
+                background-color: #525252;
+                opacity: 0.5;
+            }
+        }
+        @media screen and (max-width:767px) and (min-width:375px) {
+            width: 100%;
+        }
+    }
+}

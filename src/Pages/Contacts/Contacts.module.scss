@@ -1,0 +1,96 @@
+.root{
+    @apply w-full  relative overflow-hidden;
+    h2{
+        font-size: 54px;
+        margin: 20px 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+    .content{
+        @apply w-full py-[40px] h-full grid grid-cols-2 gap-[50px] justify-center items-center;
+        div{
+            background: #2b2b2b;
+            padding: 15px 0px;
+            border-radius: 30px;
+            @apply w-full h-full flex flex-col justify-center items-center;
+            svg{
+                @apply text-5xl text-orange-400 font-bold;
+            }
+            h3{
+                @apply text-white py-3 text-lg;
+            }
+        }
+    }
+    .pay{
+        @apply py-5;
+        h3{
+            @apply text-xl font-medium my-4;
+            .card{
+                @apply font-bold text-orange-400
+            }
+            .cash{
+                @apply font-bold text-green-500 ;
+            }
+        }
+        p{
+            @apply text-lg font-medium py-3;
+        }
+    }
+    .Ymap{
+        @apply   w-full h-full;
+        .map{
+            @apply w-screen h-[300px] 
+        }
+    } 
+    @media screen and (max-width:1200px) and (min-width:768px) {
+        .content{
+            @apply grid-cols-2;
+            padding: 0 20px;
+            margin: 20px 0;
+            gap: 20px;
+            div{
+                padding: 10px 0;
+                h3{
+                    text-align: center;
+                 padding: 5px 10px;
+                 font-size: 18px;  
+                }
+            }
+        }
+    }
+    @media screen and (max-width:767px) and (min-width:566px) {
+        .content{
+            @apply grid-cols-2;
+            padding: 0 20px;
+            margin: 20px 0;
+            gap: 20px;
+            div{
+                padding: 10px 0;
+                h3{
+                    text-align: center;
+                 padding: 5px 10px;
+                 font-size: 18px;  
+                }
+            }
+        }
+    }
+    @media screen and (max-width:567px) and (min-width:375px) {
+        .content{
+            @apply grid-cols-1;
+            padding: 0 20px;
+            margin: 20px 0;
+            gap: 20px;
+            div{
+                padding: 10px 0;
+                h3{
+                    text-align: center;
+                 padding: 5px 10px;
+                 font-size: 18px;  
+                }
+            }
+        }
+    }
+}

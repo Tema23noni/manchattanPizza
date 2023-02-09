@@ -1,0 +1,25 @@
+.root{
+    @apply flex my-[10px];
+    li{
+        @apply mx-[20px] pt-5 pb-2 flex items-center select-none;
+        a{
+            border: 2px solid rgb(251, 146, 60);
+            @apply text-center flex justify-center items-center w-[40px] h-[40px] rounded-full text-orange-400 font-semibold cursor-pointer;
+            &:hover{
+                @apply bg-orange-400 text-white
+            }
+        }
+    }
+    :global{
+        .selected{
+            a{
+                @apply bg-orange-400 text-white rounded-full
+            }
+        }
+    }
+    @media screen and (max-width:767px){
+        li{
+            @apply mx-[10px]
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.root{
+    @apply  w-full;
+    .title{
+        @apply w-full h-full;
+        h2{
+            font-size: 54px;
+            margin: 20px 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+        .content{
+            @apply my-[20px] h-full;
+            .mission{
+                @apply py-[20px];
+                    h3{
+                        @apply text-3xl text-orange-400 font-bold uppercase
+                    }
+                    
+                    p{
+                        word-break: break-all;
+                        @apply font-medium text-lg w-[60%] my-[10px]
+                    }
+    
+            }
+            .write{
+                @apply my-[40px];
+                h3{
+                    @apply text-3xl text-orange-400 font-bold uppercase
+                }
+                ul{
+                    @apply flex py-5 justify-evenly items-center;
+                    li{
+                        @apply mt-6 text-2xl flex items-center font-medium;
+                        svg{
+                            @apply text-orange-400 mx-2
+                        }
+                    }
+                }
+            }
+        }
+        .img{
+            @apply w-full flex justify-center h-[200px];
+            div{
+                @apply w-[500px] h-[200px];
+                background: url('../../img/mission.png') 50% 50%/100% 100% no-repeat;
+            }
+
+        }
+        @media screen and (max-width:767px)and (min-width: 375px){
+            padding: 0 20px;
+            .content{
+                .mission{
+                    h3{
+                        text-align: center;
+                    }
+                    p{
+                        width: 100%;
+                    }
+                }
+                .write{
+                    margin: 0 30px;
+                    h3{
+                        text-align: center;
+                    }
+                    ul{
+                        flex-wrap: wrap;
+                        li{
+                            margin: 10px;
+                        }
+                    }
+                }
+            }
+            .img{
+                div{
+                    width: 50%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+}

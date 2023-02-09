@@ -1,0 +1,254 @@
+[
+  {
+    "title": "Бразилия",
+    "url": "https://okon-biz.ru/food.loc/wp-content/uploads/2020/05/pizza-4-600x604.png",
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "price": 459,
+    "types": [
+      0,
+      1
+    ],
+    "categories": 1,
+    "rating": 3,
+    "id": 972
+
+  },
+  {
+    "title": "Чебуречная",
+    "url": "https://www.seekpng.com/png/full/818-8180602_stig-inn-lier-calzon-pizza.png",
+    "price": 429,
+    "sizes": [
+      25,
+      30
+    ],
+    "types": [
+      1
+    ],
+    "categories": 5,
+    "rating":2,
+    "id": 565
+  },
+  {
+    "title": "Пеперони",
+    "url": "https://pizza-go.ru/wp-content/uploads/2020/04/pepperoni.png",
+    "price": 389,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      0,
+      1
+    ],
+    "categories": 2,
+    "rating": 10,
+    "id": 632
+  },
+  {
+    "title": "Закрытая",
+    "url": "https://gapei.ru/wp-content/uploads/2019/09/Margarita-750x755.png",
+    "price": 509,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      0
+    ],
+    "categories": 5,
+    "rating": 7,
+    "id": 236
+  },
+  {
+    "title": "Гриль",
+    "url": "https://static.tildacdn.com/tild3166-6534-4436-b839-326637343431/pizza_ciplenok.png",
+    "price": 359,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      0,
+      1
+    ],
+    "categories": 3,
+    "rating": 8,
+    "id": 411
+  },
+  {
+    "title": "Грибная",
+    "url": "https://kartinkin.net/uploads/posts/2021-04/1617249585_27-p-pitstsa-na-belom-fone-krasivo-37.png",
+    "price": 489,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      0,
+      1
+    ],
+    "categories": 4,
+    "rating":6,
+    "id": 232
+  },
+  {
+    "title": "Ветченная",
+    "url": "https://adonius.club/uploads/posts/2022-01/1643138160_12-adonius-club-p-pitstsa-na-belom-fone-14.png",
+    "price": 309,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      0,
+      1
+    ],
+    "categories": 2,
+    "rating":9,
+    "id": 771
+  },
+  {
+    "title": "Базилик",
+    "url": "https://pngimg.com/uploads/pizza/pizza_PNG44095.png",
+    "price": 529,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      0,
+      1
+    ],
+    "categories": 4,
+    "rating": 8,
+    "id": 927
+  },
+  {
+    "title": "Овощная",
+    "url": "https://www.vippng.com/png/full/513-5134971_veggie-pizza-hotlips-pizza.png",
+    "price": 559,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      0,
+      1
+    ],
+    "categories": 4,
+    "rating":1,
+    "id": 612
+  },
+  {
+    "title": "Домашняя",
+    "url": "https://pngimg.com/uploads/pizza/pizza_PNG44019.png",
+    "price": 729,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      1
+    ],
+    "categories": 4,
+    "rating": 9,
+    "id": 923
+    },
+    {
+    "title": "Аппетитная",
+    "url": "https://catherineasquithgallery.com/uploads/posts/2021-03/1614548274_69-p-pitstsa-na-belom-fone-105.png",
+    "price": 549,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      1,
+      2
+    ],
+    "categories": 2,
+    "rating": 4,
+    "id": 525
+  },
+   {
+    "title": "Кебаб",
+    "url": "https://shali.tiktak-delivery.ru/img/dish/WCEDef74Y6tZVm4i.jpg?mark=%2Fhome%2Ftiktak%2Fhtdocs%2Fpublic%2Fassets%2Findex%2Fimages%2Fwater-mark-2.png&s=d391f71a2fe4d902d36e7adcb2f05e7b",
+    "price": 639,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      1,
+      2
+    ],
+    "categories": 3,
+    "rating": 8,
+    "id": 319
+  },
+   {
+    "title": "Жар-птица",
+    "url": "https://static.tildacdn.com/tild3737-6535-4665-b536-623962316162/shop_property_file_2.png",
+    "price": 399,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      1,
+      2
+    ],
+    "categories": 3,
+    "rating": 8,
+    "id": 2
+  },
+   {
+    "title": "Азиатская",
+    "url": "https://e7.pngegg.com/pngimages/14/892/png-clipart-california-style-pizza-vegetarian-cuisine-chicken-sicilian-pizza-pizza-food-recipe.png",
+    "price": 599,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      1,
+      2
+    ],
+    "categories": 2,
+    "rating": 6,
+    "id": 111
+  },
+   {
+    "title": "Золотая",
+    "url": "https://www.vkusfood.ru/uploads/product/000/34/pizza-cheese_2018-08-31_17-19-07.png",
+    "price": 549,
+    "sizes": [
+      25,
+      30,
+      40
+    ],
+    "types": [
+      1,
+      2
+    ],
+    "categories": 4,
+    "rating": 7,
+    "id": 9
+  }
+]

@@ -1,0 +1,62 @@
+.root{
+    cursor: pointer;
+    background: rgb(251, 146, 60);
+    @apply  rounded-xl flex py-1 my-4 px-1 relative items-center ;
+    .iconSearch{
+        background: url('https://img.icons8.com/ios/50/null/search--v1.png') top left/auto 100% no-repeat;
+        width: 30px;
+        opacity: 1;
+        height: 30px;
+        margin: 0 10px 0 10px;
+        position: absolute;
+        top: 1;
+        cursor: pointer;
+        filter: invert(1);
+        left: 0;
+        z-index: 99;
+
+        
+    }
+    .iconSearch.active{
+        opacity: 1;
+        padding: 0;
+        border: none;
+        filter: invert(0);
+        border-radius: 50%;
+    }
+    input{
+        opacity: 0;
+        display: block;
+        border: 2px solid rgb(251, 146, 60);
+        outline: none;
+        width: 0;
+        height: 100%;
+        border-radius: 20px;
+        cursor:default;
+        font-size: 20px;
+        padding: 5px 40px 5px 40px ;
+    }
+    input.active{
+        opacity: 1;
+        width: 100%;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .iconDelete{
+        background: url('https://img.icons8.com/ios-filled/50/null/delete-sign--v1.png') top right/auto 100% no-repeat;
+        width: 30px;
+        opacity: 0;
+        height: 30px;
+        margin: 0 10px 0 10px;
+        position: absolute;
+        top: 1;
+        right: 0;
+    }
+    .iconDelete.active{
+        opacity: 0.4;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+}

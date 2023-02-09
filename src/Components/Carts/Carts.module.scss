@@ -1,0 +1,102 @@
+.MenuCards{
+    @apply grid min-h-[300px] grid-cols-4 gap-5 justify-items-stretch;
+    .MenuCard{
+        @apply flex rounded-lg h-full  justify-center flex-col items-center;
+        background: rgba($color: #9c9c9c, $alpha: .1);
+        .title{
+            @apply text-xl font-bold my-2;
+        }
+        img{
+            user-select: none;
+            pointer-events: none;
+            padding: 10px;
+            width: 250px;
+            height: 100%;
+        }
+        .width{
+            @apply w-full flex justify-evenly  py-1;
+            background: rgba($color: #414141, $alpha: .05);
+            button{
+                font-size: 18px;
+                margin: 0 10px;
+                padding: 4px 10px;
+                transition: 0.3s;
+                border-radius: 20px;
+            }
+            button:hover{
+                background: rgba($color: #414141, $alpha: .2);
+            }
+            button.active{
+                transition: 0.2s;
+                color: white;
+                background: rgba($color: #414141, $alpha: 1);
+            }
+        }
+        .long{
+            @apply w-full flex justify-evenly my-2 py-1 ;
+            background: rgba($color: #414141, $alpha: .05);
+            button{
+                font-size: 18px;
+                margin: 0 10px;
+                padding: 2px 10px;
+                transition: 0.3s;
+                border-radius: 20px;
+            }
+            button:hover{
+                background: rgba($color: #414141, $alpha: .2);
+            }
+            button.active{
+                transition: 0.2s;
+                color: white;
+                background: rgba($color: #414141, $alpha: 1);
+            }
+        }
+        .price{
+            @apply flex justify-between items-center w-full p-4 ;
+            p{
+                font-size: 18px;
+                @apply font-bold px-2;
+            }
+            button{
+                font-size: 18px;
+                padding: 5px 15px;
+                transition: 0.5s;
+                @apply bg-orange-400 text-white flex justify-between  items-center rounded-2xl font-bold hover:bg-orange-500;
+                span{
+                    @apply rounded-full bg-white px-2 ml-2;
+                    color: #414141;
+                }
+            }
+            button:hover{
+                transition: .5s;
+                @apply text-orange-400;
+                background: rgba($color: #414141, $alpha: 1);
+            }
+            
+        }
+    }
+    @media screen and (max-width:567px){
+        @apply grid-cols-1;
+    }
+    @media screen and (max-width:867px) and (min-width: 568px){
+        @apply grid-cols-2;
+    }
+    @media screen and (max-width:1100px)and (min-width: 868px){
+        @apply grid-cols-3;
+    }
+}
+.ErrorStatus{
+  width: 500px;
+  height: 200px;
+  margin: 60px auto;
+    h4{
+        @apply text-2xl  text-center;
+        span{
+          @apply text-3xl
+        }
+    }
+    p{
+        @apply tracking-[3px] text-xl text-center;
+
+    }
+}

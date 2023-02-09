@@ -1,0 +1,176 @@
+.Menu{
+    @apply px-[20px] ;
+    h2{
+        font-size: 54px;
+        margin: 0;
+        padding: 20px 0;
+        box-sizing: border-box;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    .ShopingCart{
+        @apply fixed bottom-[5%] flex right-[10%] bg-orange-400;
+        div{
+            @apply flex items-center text-white py-2 px-5
+        }
+    }
+    .Menu__sort{
+        @apply w-full;
+        .Menu__namePizza{
+            @apply text-3xl uppercase tracking-wider mb-2 font-bold;
+        }
+        .Menu__filters{
+            @apply flex justify-between items-center w-full;
+            p{
+                @apply text-xl text-left;
+            }
+            .sort{
+                @apply relative;
+                button{
+                    @apply flex items-center text-[18px] px-[10px] py-[5px] rounded-3xl bg-orange-400 text-white cursor-pointer mx-[10px];
+                    z-index: 100;
+                }
+                div{
+                    animation: .3s ease-in-out  slidein;
+                    z-index: 1; 
+                    ul{
+                        @apply flex items-center justify-between;
+                        li{
+                            align-items: center;
+                            font-size: 18px;
+                            margin: 0 10px;
+                            background: rgba($color: #414141, $alpha: .1);
+                            padding: 5px 10px;
+                            border-radius: 20px;
+                            transition: 0.2s;
+                            cursor: pointer;
+                        }
+                        li.active{
+                            display: none;
+                        }
+                    }
+                }
+                @keyframes slidein {
+                    0%{
+                        transform: translate(-40%);
+                        opacity: 0;
+                    }
+                    100%{
+                        transform: translate(0);
+                        opacity: 1;
+                    }
+                }
+            }
+            div{
+                @apply flex items-center ;
+            }
+            .sortPizza{
+                overflow: hidden;
+                @apply relative;
+                button{
+                    animation: 1s slideBtn;
+                    font-size: 18px;
+                    margin: 0 10px;
+                    background: rgba($color: #414141, $alpha: .1);
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                }
+                button:hover{
+                    background: rgba($color: #414141, $alpha: .2);
+                }
+                button.active{
+                    display: none
+                }
+                @keyframes slideBtn {
+                    from{
+                        opacity: 0;
+                    }
+                    to{
+                        opacity: 1;
+                    }
+                }
+                .Menu__filters__btn{
+                    
+                    animation: 1s ease-in-out  slideinFil; 
+                    @apply flex justify-between ;
+                    
+                    li{
+                        font-size: 18px;
+                        margin: 0 10px;
+                        background: rgba($color: #414141, $alpha: .1);
+                        padding: 5px 10px;
+                        border-radius: 20px;
+                        transition: 0.2s;
+                        cursor: pointer;
+                    }
+                    li:hover{
+                        background: rgba($color: #414141, $alpha: .2);
+                    }
+                    li.active{
+                        @apply bg-orange-400 text-white;
+                    }
+                }
+            }
+            @keyframes slideinFil {
+                0%{
+                    transform: translate(60%);
+                    opacity: 0;
+                }
+                100%{
+                    transform: translate(0);
+                    opacity: 1;
+                }
+            }
+            @media screen and (max-width:767px) {
+                flex-direction: column;
+                width: 100%;
+                justify-content: start;
+                align-items: start;
+                div{
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: start;
+                    margin: 10px 0;
+                    .sort{
+                        width: 100%;
+                        flex-direction: row;
+                        align-items: center;
+                        button{
+                            margin: 0;
+                            width: 100%;
+                            justify-content: center;
+                            text-align: center;
+                            padding: 10px 10px;
+                        }
+                        div{
+                            width: 100%;
+                            ul{
+                                width: 100%;
+                                flex-direction: row;
+                                
+                                li{
+                                    padding: 10px 20px;
+                                    margin: 0 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .sortPizza{
+                    flex-wrap: wrap;
+                    div{
+                        .Menu__filters__btn{
+                            flex-wrap: wrap;
+                            li{
+                                margin: 10px 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

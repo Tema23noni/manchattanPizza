@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed&family=Unbounded&display=swap');
+.MainPage{
+    flex: 1 1 auto;
+    @apply overflow-hidden relative w-full min-h-[100%] flex justify-start items-center px-[20px] desktop:px-[0px];
+    background: #2B2B2B;
+    .root{
+      @apply flex justify-between items-center text-white text-xl font-bold;
+      font-family: 'Unbounded', cursive;
+      .content{
+        z-index: 3;
+        .textContent{
+          user-select: none;
+          .text{
+            font-family: 'Sofia Sans Extra Condensed', sans-serif;
+            @apply my-7 text-orange-400 uppercase tracking-[4px] cursor-default;
+          }
+          h2{
+            cursor: default;
+            @apply  uppercase my-10 tracking-[5px] 
+            desktop:text-7xl
+            laptop:text-7xl
+            tablet:text-6xl
+            bMobile:text-5xl bMobile:tracking-[5px] 
+            lMobile:text-5xl lMobile:tracking-[0px]            
+            ;
+            .sToH{
+              @apply text-orange-400 cursor-pointer;
+              transition: 0.3s;
+            }
+            .sToH:hover{
+              @apply text-orange-500
+            }
+          }
+
+          .pick{
+            @apply text-base my-5 cursor-default tablet:w-[400px] bMobile:w-[350px] lMobile:w-[300px]
+            desktop:text-xl
+            laptop:text-xl
+            tablet:text-lg
+            bMobile:text-base
+            lMobile:text-sm            
+            ;
+          }
+        }
+        .btn{
+          @apply flex justify-between items-center py-[40px] bMobile:flex-row bMobile:items-center
+          lMobile:flex-col lMobile:items-start
+          ;
+          user-select: none;
+          .contest{
+            background: #585858;
+            @apply text-base rounded-xl text-center mr-[30px] py-[10px] px-[20px]
+            laptop:text-lg tablet:w-[280px]
+            tablet:py-[10px] tablet:text-lg tablet:px-[25px] tablet:w-[240px]
+            bMobile:py-[10px] bMobile:text-sm bMobile:px-[25px] bMobile:w-[190px] bMobile:mb-[0px]
+            lMobile:text-base lMobile:py-[10px] lMobile:px-[5px] lMobile:w-[200px] lMobile:mb-[20px]          
+            ;
+            transition: .4s;
+            &:hover{
+              background:  #494949;
+              transform: scale(1.1)
+            }
+          }
+          .menu{
+            @apply bg-orange-400 text-lg rounded-xl mr-[30px] text-center  px-[30px]
+            desktop:py-[15px]
+            laptop:py-[15px] laptop:text-xl tablet:w-[300px]
+            tablet:py-[15px] tablet:text-lg tablet:px-[25px] tablet:w-[270px]
+            bMobile:py-[10px] bMobile:text-base bMobile:px-[25px] bMobile:w-[240px] 
+            lMobile:text-base lMobile:py-[10px] lMobile:px-[5px] lMobile:w-[200px]          
+            ;
+            transition: .4s;
+            &:hover{
+              @apply bg-orange-500;
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      .Slider{
+        overflow: hidden;
+        opacity: 0.4;
+        position: absolute;
+        left: 70%;
+        top: 50%;
+        transform: translate(-30%,-50%);
+        img{
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+        }
+      }
+    }
+}
+
+  

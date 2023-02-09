@@ -1,0 +1,138 @@
+.PizzaItem{
+    transition: 0.5s;
+    @apply w-full;
+    h2{
+        font-size: 54px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+    .image{
+        margin: 0 auto;
+        @apply flex justify-center rounded-xl py-5 ;
+        img{
+            @apply w-[400px] h-[400px] bg-orange-400 rounded-full p-5;
+        }
+    }
+    .choice{
+        margin: 30px auto;
+        text-align: center;
+        .width{
+            @apply w-full flex justify-evenly  py-1;
+            background: rgba($color: #414141, $alpha: .05);
+            button{
+                font-size: 20px;
+                margin: 0 10px;
+                padding: 4px 10px;
+                transition: 0.3s;
+                border-radius: 20px;
+            }
+            button:hover{
+                background: rgba($color: #414141, $alpha: .2);
+            }
+            button.active{
+                transition: 0.2s;
+                color: white;
+                background: rgba($color: #414141, $alpha: 1);
+            }
+        }
+        .long{
+            @apply w-full flex justify-evenly my-2 py-1 ;
+            background: rgba($color: #414141, $alpha: .05);
+            button{
+                font-size: 20px;
+                margin: 0 10px;
+                padding: 2px 10px;
+                transition: 0.3s;
+                border-radius: 20px;
+            }
+            button:hover{
+                background: rgba($color: #414141, $alpha: .2);
+            }
+            button.active{
+                transition: 0.2s;
+                color: white;
+                background: rgba($color: #414141, $alpha: 1);
+            }
+        }
+    }
+    .btn{
+        @apply flex justify-between;
+        a{
+            @apply text-orange-400 m-[40px] px-4 py-2 rounded-xl text-lg font-bold uppercase;
+            background: rgba($color: #414141, $alpha: 1);
+            span{
+                color: white;
+            }
+            transition: .5s;
+            &:hover{
+                @apply bg-orange-400 text-white
+            }
+        }
+        button{
+            @apply text-orange-400 m-[40px] px-4 py-2 rounded-xl text-lg font-bold uppercase;
+            background: rgba($color: #414141, $alpha: 1);
+            span{
+                color: white;
+            }
+            transition: .5s;
+            &:hover{
+                @apply bg-orange-400 text-white
+            }
+        }
+        @media screen and (max-width:767px) and (min-width:375px) {
+            a{
+                @apply m-[20px] text-[16px];
+            }
+            button{
+                @apply px-4 text-[16px] m-[20px]
+            }
+        }
+    }
+}
+.content{
+    @apply w-full h-full flex items-center justify-center;
+}
+.balls {
+  width: 10em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.balls div {
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  @apply bg-orange-400;
+}
+
+.balls div:nth-of-type(1) {
+  transform: translateX(-100%);
+  animation: left-swing 0.5s ease-in alternate infinite;
+}
+
+.balls div:nth-of-type(3) {
+  transform: translateX(-95%);
+  animation: right-swing 0.5s ease-out alternate infinite;
+}
+
+@keyframes left-swing {
+  50%,
+  100% {
+    transform: translateX(95%);
+  }
+}
+
+@keyframes right-swing {
+  50% {
+    transform: translateX(-95%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

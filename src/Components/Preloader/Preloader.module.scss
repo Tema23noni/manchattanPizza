@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+.root{
+    background: #2B2B2B;
+    @apply w-full h-full flex flex-col items-center justify-center;
+    h2{
+        border: 2px solid rgb(251 146 60);
+        padding: 10px 20px;
+        margin: 20px 0;
+        @apply flex items-center py-2 font-bold text-orange-400 justify-between;
+    }
+}
+
+.balls {
+  width: 10em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.balls div {
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  @apply bg-orange-400;
+}
+
+.balls div:nth-of-type(1) {
+  transform: translateX(-100%);
+  animation: left-swing 0.5s ease-in alternate infinite;
+}
+
+.balls div:nth-of-type(3) {
+  transform: translateX(-95%);
+  animation: right-swing 0.5s ease-out alternate infinite;
+}
+
+@keyframes left-swing {
+  50%,
+  100% {
+    transform: translateX(95%);
+  }
+}
+
+@keyframes right-swing {
+  50% {
+    transform: translateX(-95%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

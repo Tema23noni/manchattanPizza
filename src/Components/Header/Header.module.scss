@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+.header{
+  overflow: hidden;
+  font-family: 'Kelly Slab', cursive;
+
+    background: rgba($color: #3D3D3D, $alpha: 1);
+    color: white;
+    z-index: 999;
+    width: 100%;
+    .header__cont{
+      @apply flex items-center py-2 justify-between;
+      span{
+        padding: 20px 1px;
+        width: 1px;
+        height: 100%;
+        background-color: white;
+      }      
+      .header__logo{
+        font-family: 'Righteous', cursive;
+        @apply text-xl uppercase;
+        padding: 10px 10px;
+        margin: 0 10px;
+        position: relative;
+        border-radius: 2px;
+        cursor: pointer;
+        color: white;
+      }
+      .header__logo:hover{
+        color: #3D3D3D;
+      }
+      .header__logo::before{
+        transition: .5s all ease-out;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        opacity: 0;
+        content: "";
+        background-color: white;
+        border-radius: 10px;
+      }
+      .header__logo:hover::before{
+        transition: .2s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        z-index: -1;
+      }
+      .header__nav{
+        @apply grow ml-[100px];
+        .header__nav__links{
+          @apply flex justify-between ;
+          .links{
+            @apply relative px-5 text-lg cursor-pointer;
+            transition: .4s;
+            .linksToHome::after{
+              content: '';
+              position: absolute;
+              background: url('../../img/Header/icons8-коттедж-48\ \(1\).png') 50% 0%/cover no-repeat;
+              width: 30px;
+              height: 30px;
+              left: -10%;
+              opacity: 1;
+              top: -5%;
+            }
+            .linksToMenu::after{
+              content: '';
+              position: absolute;
+              background: url('../../img/Header/icons8-пицца-30.png') 50% 0%/cover no-repeat;
+              width: 30px;
+              height: 30px;
+              left: -10%;
+              top: -5%;
+            }
+            .linksToCart::after{
+              content: '';
+              position: absolute;
+              background: url('../../img/Header/icons8-корзина-30.png') 50% 0%/cover no-repeat;
+              width: 30px;
+              height: 30px;
+              left: -10%;
+              opacity: 1;
+              top: -5%;
+            }
+            .linksToAbout::after{
+              content: '';
+              position: absolute;
+              background: url('../../img/Header/icons8-about-48.png') 50% 0%/cover no-repeat;
+              width: 28px;
+              height: 28px;
+              left: -12%;
+              top: -5%;
+            }
+            .linksToContacts::after{
+              content: '';
+              position: absolute;
+              background: url('../../img/Header/icons8-маркер-на-карте-30\ \(1\).png') 50% 0%/cover no-repeat;
+              width: 30px;
+              height: 30px;
+              left: -10%;
+              top: -5%;
+            }
+            &:hover{
+              opacity: 0.9;
+              transform:scale(1.1);
+              
+            }
+          }
+        }
+      }
+    }
+    }
+  .header__burger{
+    display: none;
+  }
+@media screen and (max-width: 878px) and (min-width: 375px){
+  .header{
+    display: none;
+    .header__cont{
+      display: none;
+    }
+  }
+  .header__burger{
+    display: none;
+  }
+  .header__burger.active{
+    display: block;
+    background-color: #2D2D2D;
+    @apply w-full h-full fixed top-0 left-0 z-[999]
+  }
+}
