@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Righteous&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Oswald&display=swap);
 @media screen and (max-width: 878px) and (min-width: 375px){
     .MenuB{
         display: none
@@ -7,7 +8,7 @@
     .MenuB.active{
         display: block;
         @apply w-full h-full;
-        font-family: 'Kelly Slab', cursive;
+        font-family: 'Oswald';
         .MenuB__cont{
             @apply w-full h-full flex justify-center items-center;
             .MenuB__s{
@@ -52,7 +53,7 @@
                 @media screen and (max-width: 575px) and (min-width: 375px){
                   @apply flex-col items-start my-5;
                   h2{
-                    margin: 0 20px
+                    margin: 0
                   }
                 }
               }

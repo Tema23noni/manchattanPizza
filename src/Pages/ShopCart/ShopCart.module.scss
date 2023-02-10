@@ -1,6 +1,5 @@
 .ShopCard{
-    padding: 60px 20px;
-    @apply  w-full flex flex-col;
+    @apply my-5 w-full;
     .cont{
         @apply z-10 relative;
         max-width: 1200px;
@@ -48,9 +47,10 @@
         }
         .root{
             flex: 1 1 auto;
+            height: 100%;
             @apply w-full h-full  flex items-center justify-center flex-col;
             .ShopCartItems{
-                @apply w-full  my-5;
+                @apply w-full h-full  my-5;
                 @media screen and (max-width: 767px) and (min-width:575px) {
                     @apply w-full grid  justify-between grid-cols-1 gap-5 justify-items-center
                 }
@@ -60,7 +60,7 @@
             }
         }
         .footer{
-    
+            @apply h-full w-full;
             .totalPizza{
                 @apply flex w-full justify-between;
                 div{
