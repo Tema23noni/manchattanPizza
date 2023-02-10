@@ -1,5 +1,5 @@
 .ShopCartItem{
-        @apply w-full flex h-full justify-between items-center my-10;
+        @apply w-full flex justify-between items-center my-10;
         .aboutPizza{
             @apply flex items-center justify-center;
             img{
@@ -49,8 +49,6 @@
     }
     @media screen and (max-width:767px) and (min-width:375px) {
         .ShopCartItem{
-        padding: 0px;
-        margin: 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
