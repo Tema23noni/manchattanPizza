@@ -25,14 +25,16 @@ const CartItem:React.FC<CartItemProps> = ({id, price, size, title, type, url,cou
             <p>{type}, {size}см</p>
         </div>
     </div>
-    <div className={cl.countPizza}>
-        <span onClick={() => dispatch(minusItems(id))}>-</span>
-        <p>{count}</p>
-        <span onClick={() => dispatch(addItems({id, size,type} as CartItemProps))}>+</span>
-    </div>
-    <div className={cl.pricePizza}>
-        <p>{price}руб.</p>
-        <RiDeleteBack2Fill onClick={() => dispatch(removeItem(id))}/>
+    <div className={cl.contParam}>
+      <div className={cl.countPizza}>
+          <span onClick={() => dispatch(minusItems(id))}>-</span>
+          <p>{count}</p>
+          <span onClick={() => dispatch(addItems({id, size,type} as CartItemProps))}>+</span>
+      </div>
+      <div className={cl.pricePizza}>
+          <p>{price}руб.</p>
+          <RiDeleteBack2Fill onClick={() => dispatch(removeItem(id))}/>
+      </div>
     </div>
   </div>
   );

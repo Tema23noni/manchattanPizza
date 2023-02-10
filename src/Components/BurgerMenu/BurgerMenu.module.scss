@@ -9,17 +9,63 @@
         @apply w-full h-full;
         font-family: 'Kelly Slab', cursive;
         .MenuB__cont{
-            @apply w-full h-full flex justify-center;
-            .header__nav{
+            @apply w-full h-full flex justify-center items-center;
+            .MenuB__s{
+              @apply w-full h-full flex flex-col justify-between;
+              .MenuB__cart{
+                @apply w-full h-[100px] flex items-center justify-start;
+                h2{
+                  font-family: 'Righteous', cursive;
+                  @apply text-xl uppercase;
+                  padding: 10px 10px;
+                  margin: 0 10px;
+                  position: relative;
+                  border-radius: 2px;
+                  cursor: pointer;
+                  color: white;
+                }
+                h2:hover{
+                  color: #3D3D3D;
+                }
+                h2::before{
+                  transition: .5s all ease-out;
+                  position: absolute;
+                  top: 0;
+                  left: 50%;
+                  right: 50%;
+                  bottom: 0;
+                  opacity: 0;
+                  content: "";
+                  background-color: white;
+                  border-radius: 10px;
+                }
+                h2:hover::before{
+                  transition: .2s all ease;
+                  left: 0;
+                  right: 0;
+                  opacity: 1;
+                  z-index: -1;
+                }
+                p{
+                  @apply mx-5 bg-orange-400 px-4 py-2 rounded-2xl font-semibold text-white text-lg tracking-wider;
+                }
+                @media screen and (max-width: 575px) and (min-width: 375px){
+                  @apply flex-col items-start my-5;
+                  h2{
+                    margin: 0 20px
+                  }
+                }
+              }
+              .header__nav{
+                @apply h-4/5 w-full justify-center items-center;
                 .header__nav__links{
-                    @apply flex flex-col w-full h-full items-center justify-evenly;
+                    @apply mx-10 flex flex-col w-full h-3/4 items-center justify-between;
                     .links{
-                        text-align: center;
-                        width: 100%;
+                        text-align: left;
+                        width:70%;
                         font-family: 'Righteous', cursive;
                         @apply text-xl uppercase;
-                        padding: 0 20px;
-                        margin: 0 0px;
+                        padding: 0 40px;
                         position: relative;
                         border-radius: 2px;
                         cursor: pointer;
@@ -43,104 +89,63 @@
                       .links:hover::before{
                         transition: .2s all ease;
                         left: 0;
+                        width: 100%;
                         right: 0;
                         opacity: 1;
                         z-index: -1;
                       }
                     .links{
-                        @apply text-white text-5xl uppercase relative ;
+                        @apply text-white text-2xl font-bold uppercase relative ;
                         transition: 0.3s;
-                        .linksToHome::after{
-                            content: '';
-                            position: absolute;
-                            background: url('../../img/Header/icons8-коттедж-48\ \(1\).png') 50% 0%/cover no-repeat;
-                            width: 60px;
-                            height: 60px;
-                            left: -10%;
-                            opacity: 1;
-                            top: -15%;
-                        }
                         .linksToHome::before{
                             content: '';
                             position: absolute;
                             background: url('../../img/Header/icons8-коттедж-48\ \(1\).png') 50% 0%/cover no-repeat;
-                            width: 60px;
-                            height: 60px;
-                            right: -10%;
+                            width: 32px;
+                            height: 32px;
+                            left: -10%;
                             opacity: 1;
-                            top: -15%;
+                            top: 0%;
                         }
+                      
                           .linksToMenu::after{
                             content: '';
                             position: absolute;
                             background: url('../../img/Header/icons8-пицца-30.png') 50% 0%/cover no-repeat;
-                            width: 50px;
-                            height: 50px;
+                            width: 30px;
+                            height: 30px;
                             left: -10%;
-                            top: -5%;
+                            top: 0%;
                           }
-                          .linksToMenu::before{
-                            content: '';
-                            position: absolute;
-                            background: url('../../img/Header/icons8-пицца-30.png') 50% 0%/cover no-repeat;
-                            width: 50px;
-                            height: 50px;
-                            right: -10%;
-                            top: -5%;
-                          }
+                       
                           .linksToAbout::after{
                             content: '';
                             position: absolute;
                             background: url('../../img/Header/icons8-about-48.png') 50% 0%/cover no-repeat;
-                            width: 50px;
-                            height: 50px;
+                            width: 30px;
+                            height: 30px;
                             left: -10%;
-                            top: -5%;
+                            top: 0%;
                           }
-                          .linksToAbout::before{
-                            content: '';
-                            position: absolute;
-                            background: url('../../img/Header/icons8-about-48.png') 50% 0%/cover no-repeat;
-                            width: 50px;
-                            height: 50px;
-                            right: -10%;
-                            top: -5%;
-                          }
+                          
                           .linksToContacts::after{
                             content: '';
                             position: absolute;
                             background: url('../../img/Header/icons8-маркер-на-карте-30\ \(1\).png') 50% 0%/cover no-repeat;
-                            width: 50px;
-                            height: 50px;
-                            left: -15%;
-                            top: -5%;
+                            width: 30px;
+                            height: 30px;
+                            left: -10%;
+                            top: 0%;
                           }
-                          .linksToContacts::before{
-                            content: '';
-                            position: absolute;
-                            background: url('../../img/Header/icons8-маркер-на-карте-30\ \(1\).png') 50% 0%/cover no-repeat;
-                            width: 50px;
-                            height: 50px;
-                            right: -15%;
-                            top: -5%;
-                          }
+                        
                           .linksToCart::after{
                             content: '';
                             position: absolute;
                             background: url('../../img/Header/icons8-корзина-30.png') 50% 0%/cover no-repeat;
-                            width: 50px;
-                            height: 50px;
-                            left: -15%;
-                            top: -5%;
-                          }
-                          .linksToCart::before{
-                            content: '';
-                            position: absolute;
-                            background: url('../../img/Header/icons8-корзина-30.png') 50% 0%/cover no-repeat;
-                            width: 50px;
-                            height: 50px;
-                            right: -15%;
-                            top: -5%;
+                            width: 30px;
+                            height: 30px;
+                            left: -10%;
+                            top: 0%;
                           }
                           &:hover{
                             opacity: 0.9;
@@ -157,6 +162,8 @@
                     }
                 }
             }
+            }
+            
         }
     }
     .MenuB__open{

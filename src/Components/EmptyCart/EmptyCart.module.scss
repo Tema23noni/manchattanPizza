@@ -1,11 +1,11 @@
 .root{
-    height: 90%;
+    height: 100%;
     @apply w-full flex justify-center items-center flex-col;
     div{
         margin: 50px 0;
         @apply text-2xl text-center;
         h2{
-            @apply text-4xl font-bold;
+            @apply text-4xl my-6 font-bold;
         }
         p{
             letter-spacing: 3px;
@@ -13,9 +13,17 @@
                 @apply text-5xl
             }
         }
+        @media screen and (max-width:767px) and (min-width:375px) {
+            p{
+                font-size: 18px;
+                span{
+                    @apply text-4xl;
+                }
+            }
+        }
     }
     img{
-        margin: 20px 40px 50px 0;
+        margin: 0px 40px 20px 0;
         width: 400px;
         height: 300px;
     }

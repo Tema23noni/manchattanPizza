@@ -15,32 +15,36 @@
                 }
             }
         }
-        .countPizza{
-            @apply flex items-center justify-center;
-            p{
-                user-select: none;
-                @apply text-2xl cursor-default bg-gray-200 rounded-md px-5 mx-2
+        .contParam{
+            @apply flex justify-between w-1/2;
+            .countPizza{
+                @apply flex items-center justify-center;
+                p{
+                    user-select: none;
+                    @apply text-2xl cursor-default bg-gray-200 rounded-md px-5 mx-2
+                }
+                span{
+                    user-select: none;
+                    padding-bottom: 1px;
+                    width: 36px;
+                    height: 36px;
+                    @apply rounded-full cursor-pointer bg-orange-400 flex items-center justify-center text-white text-3xl;
+                }
             }
-            span{
-                user-select: none;
-                padding-bottom: 1px;
-                width: 36px;
-                height: 36px;
-                @apply rounded-full cursor-pointer bg-orange-400 flex items-center justify-center text-white text-3xl;
+            .pricePizza{
+                @apply flex items-center text-3xl;
+                p{
+                    @apply text-xl mx-5
+                }
+                svg{
+                    user-select: none;
+                    width: 40px;
+                    height: 40px;
+                    @apply bg-orange-400 text-white rounded-full p-2 cursor-pointer;
+                }
             }
         }
-        .pricePizza{
-            @apply flex items-center text-3xl;
-            p{
-                @apply text-xl mx-5
-            }
-            svg{
-                user-select: none;
-                width: 40px;
-                height: 40px;
-                @apply bg-orange-400 text-white rounded-full p-2 cursor-pointer;
-            }
-        }
+
         
     }
     @media screen and (max-width:767px) and (min-width:375px) {
@@ -51,10 +55,14 @@
         justify-content: center;
         align-items: center;
         border-radius: 20px;
-        background-color: #3b3b3b;
+        background-color: #3b3b3be1;
         color: white;
         .aboutPizza{
-            flex-direction: column;
+
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+
             img{
                 width: 100px;
                 height: 100px;
@@ -64,6 +72,7 @@
                 margin: 10px 0;
                 h2{
                     font-size: 24px;
+                    font-weight: 600;
                     
                 }
                 p{
@@ -71,16 +80,25 @@
                 }
             }  
         }
-        .countPizza{
-            p{
-                @apply bg-orange-400
+        .contParam{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            padding: 0 20px;
+            .countPizza{
+
+                p{
+                    @apply bg-orange-400
+                }
+            }
+            .pricePizza{
+    
+                margin: 10px 0;
+                p{
+                    font-size: 24px;
+                }
             }
         }
-        .pricePizza{
-            margin: 10px 0;
-            p{
-                font-size: 24px;
-            }
-        }
+
     }
     }

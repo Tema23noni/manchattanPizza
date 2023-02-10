@@ -13,3 +13,8 @@
         @apply bg-orange-500
     }
 }
+@media screen and (max-width: 878px) and (min-width: 375px){
+    .CartBtn{
+        display: none;
+    }
+}

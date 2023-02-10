@@ -74,28 +74,30 @@ const PizzaItem: React.FC = () => {
   return (
   <div className={cl.PizzaItem}>
     <div className="cont">
-        <h2>{pizzaData.title}</h2>
-        <div className={cl.image}>
-            <img src={pizzaData.url} />
-        </div>
-        <div className={cl.choice}>
-            <div className={cl.width}>
-                {
-                    pizzaData.types.map((_,id:number) =>{
-                        return <button onClick={()=> setActiveType(id)} className={activeType === id? cl.active: ''} key={id}>{typesNames[id]}</button>
-                    })
-                }
+       <div className={cl.content}>
+            <h2>{pizzaData.title}</h2>
+            <div className={cl.image}>
+                <img src={pizzaData.url} />
             </div>
-            <div className={cl.long}>
-                {pizzaData.sizes.map((item:number,id:number)=>{
-                    return <button key={id} onClick={()=> setActiveSize(id)} className={activeSize === id? cl.active: ''}>{item}см</button>
-                })}
+            <div className={cl.choice}>
+                <div className={cl.width}>
+                    {
+                        pizzaData.types.map((_,id:number) =>{
+                            return <button onClick={()=> setActiveType(id)} className={activeType === id? cl.active: ''} key={id}>{typesNames[id]}</button>
+                        })
+                    }
+                </div>
+                <div className={cl.long}>
+                    {pizzaData.sizes.map((item:number,id:number)=>{
+                        return <button key={id} onClick={()=> setActiveSize(id)} className={activeSize === id? cl.active: ''}>{item}см</button>
+                    })}
+                </div>
             </div>
-        </div>
-        <div className={cl.btn}>
-            <Link to="/menu">В меню</Link>
-            <button onClick={addPizza}>В корзину <span>{pizzaData.price} руб.</span></button>
-        </div>
+            <div className={cl.btn}>
+                <Link to="/menu">В меню</Link>
+                <button onClick={addPizza}>В корзину <span>{pizzaData.price} руб.</span></button>
+            </div>
+       </div >
     </div>
   </div>
   );

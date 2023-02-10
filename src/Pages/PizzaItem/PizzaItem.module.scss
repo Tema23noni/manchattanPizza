@@ -1,98 +1,113 @@
 .PizzaItem{
     transition: 0.5s;
-    @apply w-full;
-    h2{
-        font-size: 54px;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-    }
-    .image{
-        margin: 0 auto;
-        @apply flex justify-center rounded-xl py-5 ;
-        img{
-            @apply w-[400px] h-[400px] bg-orange-400 rounded-full p-5;
-        }
-    }
-    .choice{
-        margin: 30px auto;
-        text-align: center;
-        .width{
-            @apply w-full flex justify-evenly  py-1;
-            background: rgba($color: #414141, $alpha: .05);
-            button{
-                font-size: 20px;
-                margin: 0 10px;
-                padding: 4px 10px;
-                transition: 0.3s;
-                border-radius: 20px;
-            }
-            button:hover{
-                background: rgba($color: #414141, $alpha: .2);
-            }
-            button.active{
-                transition: 0.2s;
-                color: white;
-                background: rgba($color: #414141, $alpha: 1);
+    @apply w-full h-full  ;
+    .content{
+        @apply w-full h-full flex flex-col justify-between;
+        h2{
+            font-size: 54px; 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            @media screen and (max-width:767px) and (min-width:375px) {
+                font-size: 30px;
             }
         }
-        .long{
-            @apply w-full flex justify-evenly my-2 py-1 ;
-            background: rgba($color: #414141, $alpha: .05);
-            button{
-                font-size: 20px;
-                margin: 0 10px;
-                padding: 2px 10px;
-                transition: 0.3s;
-                border-radius: 20px;
+        .image{
+            margin: 0 auto;
+            @apply flex justify-center rounded-xl py-5 ;
+            img{
+                @apply w-[400px] h-[400px] bg-orange-400 rounded-full p-5;
             }
-            button:hover{
-                background: rgba($color: #414141, $alpha: .2);
-            }
-            button.active{
-                transition: 0.2s;
-                color: white;
-                background: rgba($color: #414141, $alpha: 1);
+            @media screen and (max-width:767px) and (min-width:375px) {
+                img{
+                    width: 300px;
+                    height: 300px;
+                    padding: 0px;
+                }
             }
         }
-    }
-    .btn{
-        @apply flex justify-between;
-        a{
-            @apply text-orange-400 m-[40px] px-4 py-2 rounded-xl text-lg font-bold uppercase;
-            background: rgba($color: #414141, $alpha: 1);
-            span{
-                color: white;
+        .choice{
+            width: 100%;
+            margin: 30px auto;
+            text-align: center;
+            .width{
+                @apply w-full flex justify-evenly  py-1;
+                background: rgba($color: #414141, $alpha: .05);
+                button{
+                    font-size: 20px;
+                    margin: 0 10px;
+                    padding: 4px 10px;
+                    transition: 0.3s;
+                    border-radius: 20px;
+                }
+                button:hover{
+                    background: rgba($color: #414141, $alpha: .2);
+                }
+                button.active{
+                    transition: 0.2s;
+                    color: white;
+                    background: rgba($color: #414141, $alpha: 1);
+                }
             }
-            transition: .5s;
-            &:hover{
-                @apply bg-orange-400 text-white
+            .long{
+                @apply w-full flex justify-evenly my-2 py-1 ;
+                background: rgba($color: #414141, $alpha: .05);
+                button{
+                    font-size: 20px;
+                    margin: 0 10px;
+                    padding: 2px 10px;
+                    transition: 0.3s;
+                    border-radius: 20px;
+                }
+                button:hover{
+                    background: rgba($color: #414141, $alpha: .2);
+                }
+                button.active{
+                    transition: 0.2s;
+                    color: white;
+                    background: rgba($color: #414141, $alpha: 1);
+                }
             }
         }
-        button{
-            @apply text-orange-400 m-[40px] px-4 py-2 rounded-xl text-lg font-bold uppercase;
-            background: rgba($color: #414141, $alpha: 1);
-            span{
-                color: white;
-            }
-            transition: .5s;
-            &:hover{
-                @apply bg-orange-400 text-white
-            }
-        }
-        @media screen and (max-width:767px) and (min-width:375px) {
+        .btn{
+            @apply flex justify-between;
             a{
-                font-size: 16px;
-                margin: 20px;
+                @apply text-orange-400 m-[40px] px-4 py-2 rounded-xl text-lg font-bold uppercase;
+                background: rgba($color: #414141, $alpha: 1);
+                span{
+                    color: white;
+                }
+                transition: .5s;
+                &:hover{
+                    @apply bg-orange-400 text-white
+                }
             }
             button{
-                @apply text-[16px] m-[20px] px-4 
+                @apply text-orange-400 m-[40px] px-4 py-2 rounded-xl text-lg font-bold uppercase;
+                background: rgba($color: #414141, $alpha: 1);
+                span{
+                    color: white;
+                }
+                transition: .5s;
+                &:hover{
+                    @apply bg-orange-400 text-white
+                }
+            }
+            @media screen and (max-width:767px) and (min-width:375px) {
+                a{
+                    font-size: 16px;
+                    margin: 20px;
+                }
+                button{
+                    @apply text-[16px] m-[20px] px-4 
+                }
             }
         }
     }
+    
 }
 .content{
     @apply w-full h-full flex items-center justify-center;
